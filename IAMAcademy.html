@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAM Accredited Training Centers & How It Works</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet">
+    <style>
+
+@font-face {
+    font-family: 'Author';
+    src: url('/IAM/Font/Author/Author-Variable.eot');
+    src: url('/IAM/Font/Author/Author-Variable.eot?#iefix') format('embedded-opentype'),
+         url('/IAM/Font/Author/Author-Variable.woff2') format('woff2'),
+         url('/IAM/Font/Author/Author-Variable.woff') format('woff'),
+         url('/IAM/Font/Author/Author-Variable.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Author';
+    src: url('/IAM/Font/Author/Author-Medium.eot');
+    src: url('/IAM/Font/Author/Author-Medium.eot?#iefix') format('embedded-opentype'),
+         url('/IAM/Font/Author/Author-Medium.woff2') format('woff2'),
+         url('/IAM/Font/Author/Author-Medium.woff') format('woff'),
+         url('/IAM/Font/Author/Author-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+    /* Global Styles */
+    body {
+      font-family: 'Author', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #003847;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    /* Description Styles */
+    .description {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+      color: gray;
+    }
+
+
+    /* Cards Container */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-item img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .card-item h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .card-item p {
+      color: gray;
+      font-size: 1.25rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .card-item {
+        padding: 20px;
+      }
+
+      .card-item h3 {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card-item h3 {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-item {
+        padding: 10px;
+      }
+
+      .card-item h3 {
+        font-size: 1.2rem;
+      }
+
+      .card-item p {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Cards Section */
+    .cards-section {
+      padding: 60px 20px;
+      background-color: #ffffff;
+    }
+
+    /* New Section */
+    .how-it-works-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 60px 20px;
+      align-items:center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .how-it-works-text {
+      text-align: left;
+      font-size: 1.25rem;
+    }
+  
+
+    .how-it-works-text div {
+      margin-bottom: 30px;
+    }
+
+    .how-it-works-text h2 {
+      font-size: 2rem;
+      color: #005154;
+      margin-bottom: 15px;
+    }
+
+    .how-it-works-text h4 {
+      font-size: 1.5rem;
+      color: #005154;
+      margin-bottom: 10px;
+    }
+
+    .how-it-works-text p {
+      font-size: 1.25rem;
+      color: gray;
+    }
+
+    .how-it-works-text ul{
+      color: gray;
+    }
+
+    .SignUp-Btn{
+        padding: 8px 12px;
+        background-color: #005154;
+        color: white;
+        border: 1px solid #005154;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        margin-top: 16px;
+    }
+
+    .SignUp-Btn:hover{
+        background-color: white;
+        color: #005154;
+    }
+
+    .how-it-works-img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .how-it-works-img img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 1024px) {
+    .how-it-works-section {
+      grid-template-columns: 1fr;
+    }
+
+    .how-it-works-text {
+      text-align: center;
+      order: 2; /* Make text appear after the image */
+    }
+
+    .how-it-works-img {
+      order: 1; /* Make image appear first */
+      height: auto;
+    }
+
+    .how-it-works-img img {
+      height: auto;
+    }
+  }
+
+    /* Responsive Design for New Section */
+    @media (max-width: 1024px) {
+      .how-it-works-section {
+        grid-template-columns: 1fr;
+      }
+
+      .how-it-works-text {
+        text-align: left;
+      }
+    }
+
+    /* New Section with 2 cards */
+    .two-cards-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .two-card-item {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      display: grid;
+      grid-template-rows: 250px 1fr; /* Two columns, image first and text second */
+      gap: 20px;
+      align-items: center;
+    }
+
+    .two-card-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .two-card-item h3 {
+      font-size: 1.5rem;
+      color: #005154;
+      margin-bottom: 10px;
+    }
+
+    .two-card-item p {
+      font-size: 1.15rem;
+      color: gray;
+    }
+
+    /* Responsive Design for Two Cards Section */
+    @media (max-width: 1200px) {
+      .two-cards-section {
+        grid-template-columns: 1fr; /* One column layout for smaller screens */
+      }
+
+      .two-card-item {
+        grid-template-columns: 1fr; /* Stack image on top of text */
+        text-align: left;
+      }
+
+      .two-card-item img {
+        margin: 0 auto;
+      }
+    }
+
+     /* How it works section */
+    .how-to-get-started-text {
+      max-width: 320px;
+      margin-right: 20px;
+      color: #333;
+    }
+
+    .how-to-get-started-text p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .how-to-get-started-text button {
+      background-color: #003847;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .how-to-get-started-text button:hover {
+      background-color: #959fae;
+    }
+
+    .cards-container-HGS {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-number {
+      margin-bottom: 15px;
+    }
+
+    .card-number img{
+      width: 60px;
+    }
+
+
+    .card-title {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #005154;
+      margin-bottom: 15px;
+    }
+
+    .card-description {
+      font-size: 1.15em;
+      color: gray;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 850px) {
+      .cards-container-HGS {
+        grid-template-columns: 1fr;
+      }
+
+      .how-it-works-text {
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      .cards-container-how {
+        max-width: 100%;
+      }
+    }
+
+    
+  </style>
+  </head>
+  <body>
+
+    <!-- IAM Accredited Training Centers Section -->
+
+    <!-- Cards Section -->
+    <div class="cards-section">
+      <div class="container">
+        <h1>The IAM Academy <br>Including the IAM Platform for Professional
+          Growth</h1>
+
+        <p class="description">
+          The Institute of Administrative Management (IAM) Academy is a premier
+          platform dedicated to
+          providing high-quality qualifications and short courses tailored for
+          administrative professionals.
+          Designed to cater to the needs of modern learners, the IAM Academy
+          offers flexible, accessible, and
+          comprehensive learning opportunities that help individuals enhance
+          their skills, advance their
+          careers, and contribute effectively to their organisations.
+        </p>
+      </div>
+    </div>
+
+    <!-- New How It Works Section -->
+    <div class="how-it-works-section">
+      <!-- First Column with Text -->
+      <div class="how-it-works-text">
+        <h1>What the IAM Academy Offers</h1>
+        <div>
+          <h3>Comprehensive Qualifications</h3>
+          <p>
+            IAM Academy provides a range of qualifications that cover essential
+            areas in administrative management and business operations.
+            These qualifications are designed to equip professionals with the
+            knowledge and skills required to excel in their roles and achieve
+            career growth.
+          </p>
+        </div>
+        <div>
+          <h3>Key areas of study include:</h3>
+          <ul>
+            <li>Leadership and Management</li>
+            <li>Office Administration</li>
+            <li>Project Management</li>
+            <li>Business Planning and Strategy</li>
+            <li>Human Resources Management</li>
+            <li>Finance and Accounting</li>
+            <li>Marketing and Sales</li>
+          </ul>
+        </div>
+        <button class="SignUp-Btn">IAM Qualifications</button>
+      </div>
+
+      <!-- Second Column with Image -->
+      <div class="how-it-works-img">
+        <img src="Partner.png" alt="How it works image">
+      </div>
+    </div>
+
+    <div class="how-it-works-section">
+      <!-- First Column with Image -->
+      <div class="how-it-works-img">
+        <img src="Partner.png" alt="How it works image">
+      </div>
+
+      <!-- Second Column with Text -->
+      <div class="how-it-works-text">
+        <div>
+          <h3>CPD Courses for Skill Enhancement</h3>
+          <p>
+            The IAM Academy offers a variety of short courses that focus on
+            specific skills and knowledge areas relevant to business and
+            administrative professionals.
+            These courses are ideal for continuous professional development and
+            include topics such as:
+          </p>
+        </div>
+        <ul>
+          <li>Communication and Interpersonal Skills</li>
+          <li>Customer Service Excellence</li>
+          <li>Time Management and Productivity</li>
+          <li>Conflict Resolution</li>
+          <li>Cybersecurity Awareness</li>
+          <li>Digital Marketing</li>
+          <li>Health and Safety Management</li>
+        </ul>
+        <button class="SignUp-Btn">IAM Courses</button>
+      </div>
+    </div>
+
+    <div class="cards-section">
+      <div class="container">
+        <h1>Key Features of the IAM Academy</h1>
+        <h4>Flexible Learning Options </h4>
+        <p class="description">
+          The IAM Academy understands the diverse needs of today’s professionals
+          and offers flexible learning options to accommodate different
+          schedules and learning preferences.
+        </p>
+      </div>
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card-item">
+          <img src="https://via.placeholder.com/300x300"
+            alt="Skill Enhancement">
+          <h3>Self-Paced Online Courses</h3>
+          <p>
+            Study at your own pace with access to course materials anytime,
+            anywhere.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-item">
+          <img src="https://via.placeholder.com/300x300"
+            alt="Career Advancement">
+          <h3>Live Webinars</h3>
+          <p>
+            Participate in interactive sessions with industry experts and gain
+            real-time insights.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-item">
+          <img src="https://via.placeholder.com/300x300" alt="Flexibility">
+          <h3>Blended Learning </h3>
+          <p>
+            Combine online learning with occasional in-person sessions for a
+            comprehensive learning experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-cards-section">
+      <!-- First Card -->
+      <div class="two-card-item">
+        <img src="Partner.png" alt="Card Image 1">
+        <div>
+          <h3>Interactive and Engaging Content</h3>
+          <p>Courses at the IAM Academy are designed to be interactive and
+            engaging, utilising various multimedia elements such as videos,
+            quizzes, and discussion forums. This approach ensures that learners
+            remain motivated and retain the knowledge gained.</p>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="two-card-item">
+        <img src="Partner.png" alt="Card Image 2">
+        <div>
+          <h3>Expert Instructors and Industry Insights</h3>
+          <p>The IAM Academy courses are developed and delivered by experienced
+            instructors who are experts in their fields. Learners benefit from
+            their practical insights, industry knowledge, and real-world
+            examples, ensuring that the education they receive is relevant and
+            applicable.</p>
+        </div>
+      </div>
+
+      <!-- Thirds Card -->
+      <div class="two-card-item">
+        <img src="Partner.png" alt="Card Image 1">
+        <div>
+          <h3>Continuous Support and Resources</h3>
+          <p>IAM Academy provides continuous support to learners through access
+            to a wealth of resources, including study guides, reference
+            materials, and online libraries. Additionally, learners can connect
+            with instructors and peers for collaboration and support throughout
+            their journey.</p>
+        </div>
+      </div>
+
+      <!-- Fourth Card -->
+      <div class="two-card-item">
+        <img src="Partner.png" alt="Card Image 2">
+        <div>
+          <h3>Accredited and Recognised Qualifications</h3>
+          <p>IAM Academy’s qualifications are accredited and recognised by
+            industry bodies and employers, adding significant value to the
+            credentials obtained. This recognition enhances the credibility and
+            career prospects of graduates</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards section -->
+    <div class="cards-container-HGS">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-number"><img src="SVG/No1.svg" alt></div>
+        <div class="card-title">Explore the Course Catalogue</div>
+        <div class="card-description">
+          Visit the IAM Academy website to browse the wide range of
+          qualifications and short courses available. Detailed course
+          descriptions and learning outcomes are provided to help you make an
+          informed decision.
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-number"><img src="SVG/No2.svg" alt></div>
+        <div class="card-title">Enroll Online </div>
+        <div class="card-description">
+          Once you have selected the courses or qualifications that meet your
+          needs, you can easily enroll online through the IAM Academy platform.
+          The enrollment process is straightforward and user-friendly.
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-number"><img src="SVG/No3.svg" alt></div>
+        <div class="card-title">Start learning</div>
+        <div class="card-description">
+          After enrollment, you will gain immediate access to course materials
+          and resources. Begin your learning journey at your own pace,
+          participate in interactive sessions, and take advantage of the support
+          provided.
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-number"><img src="SVG/No4.svg" alt></div>
+        <div class="card-title">Achieve Your Goals</div>
+        <div class="card-description">
+          After enrollment, you will gain immediate access to course materials
+          and resources. Begin your learning journey at your own pace,
+          participate in interactive sessions, and take advantage of the support
+          provided.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
